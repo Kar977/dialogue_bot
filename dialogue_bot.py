@@ -12,7 +12,7 @@ class SupportBot:
     def __init__(self):
         self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"],
                                  "request_for_order_progress": [r"(H|h)ow.*my.*order.*look\d*.*(like)?\\?*"],
-                                 "new_order": [r'\d.*want.{3}*car']}
+                                 "cars_on_sale": [r"[Ss]how.*me.*car.*.*on.*sales*"]}
 
 
 # Function to introduce and welcome our client.
@@ -45,6 +45,8 @@ class SupportBot:
                 match_regex = re.match(regex_pattern, reply)
                 if match_regex and key == "pay_for_service":
                     return self.pay_service()
+                if match_regex and key == "cars_on_sale":
+                    return self.show_cars_on_sale()
 
 #In the correct version the function should put through online payment
     def pay_service(self):
@@ -53,6 +55,10 @@ class SupportBot:
         print("Waiting for save connection... ")
         sleep(1)
         return "CONNECTION ERROR\n Try to connect later.\nSorry for trouble.\n"
+    
+    def show_cars_on_sale(self):
+        
+        parameters = input("")
 
 
 SupportConversatoin = SupportBot()

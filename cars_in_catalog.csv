@@ -1,0 +1,16 @@
+Vehicle ID;Year;Make;Model;Class;Drive;Transmission;IsOnSale;Engine Index;Engine Cylinders;Turbocharger;Fuel Type;Combined MPG (FT1);Color;Price
+31675;2012;Acura;TSX;Compact Cars;Front-Wheel Drive;Automatic (S5);True;20;4;;Premium;25;Black;26000
+32066;2012;Acura;RL;Midsize Cars;All-Wheel Drive;Automatic (S6);True;32;6;;Premium;20;Black;19999
+31674;2012;Acura;TSX;Compact Cars;Front-Wheel Drive;Manual 6-Speed;True;19;4;;Premium;24;White;15000
+31812;2012;Acura;TSX Wagon;Small Station Wagons;Front-Wheel Drive;Automatic (S5);False;21;4;;Premium;24;White;35000
+31900;2012;Acura;RDX 2WD;Sport Utility Vehicle - 2WD;Front-Wheel Drive;Automatic (S5);False;34;4;T;Premium;21;Red;17000
+31210;2012;Acura;TL 4WD;Midsize Cars;All-Wheel Drive;Automatic (S6);True;31;6;;Premium;21;Black;8000
+31209;2012;Acura;TL 2WD;Midsize Cars;Front-Wheel Drive;Automatic (S6);False;22;6;;Premium;23;Blue;19500
+31104;2012;Aston Martin;DB9;Minicompact Cars;Rear-Wheel Drive;Manual 6-Speed;True;10;12;;Premium;13;Red;30500
+31676;2012;Acura;TSX;Compact Cars;Front-Wheel Drive;Automatic (S5);True;24;6;;Premium;22;Black;45000
+31103;2012;Aston Martin;DB9;Minicompact Cars;Rear-Wheel Drive;Automatic (S6);True;6;12;;Premium;15;White;150000
+31945;2012;Acura;ZDX 4WD;Sport Utility Vehicle - 4WD;All-Wheel Drive;Automatic (S6);True;33;6;;Premium;19;Black;26000
+32106;2012;Mitsubish;;;;;False;;;;;;Yellow;1500
+32064;2012;Mitsubishi;Lancer Evolution;Compact Cars;All-Wheel Drive;Manual 5-Speed;True;131;4;T;Premium;19;Green;41000
+32065;2012;Mitsubishi;Lancer Evolution;Compact Cars;All-Wheel Drive;Auto(AM6);False;132;4;T;Premium;19;White;50000
+32063;2012;Mitsubishi;Lancer AWD;Compact Cars;All-Wheel Drive;Auto(AV-S6);True;116;4;;Regular;25;Black;55000

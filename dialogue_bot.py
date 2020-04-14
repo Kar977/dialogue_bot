@@ -10,7 +10,10 @@ class SupportBot:
     exit_commands = ("exit", "leave", "quit", "goodbye", "bye")
 
     def __init__(self):
-        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"]}
+        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"],
+                                 "request_for_order_progress": [r"(H|h)ow.*my.*order.*look\d*.*(like)?\\?*"],
+                                 "new_order": [r'\d.*want.{3}*car']}
+
 
 # Function to introduce and welcome our client.
     def hello_customer(self):

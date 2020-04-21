@@ -1,17 +1,19 @@
 import re
-import time
+from time import sleep
 
 """This is my first little 'project'.
     It is simple dialogue chat bot.
     Responding on programmed returns about car dealership - support."""
-
 
 class SupportBot:
 
     exit_commands = ("exit", "leave", "quit", "goodbye", "bye")
 
     def __init__(self):
-        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"]}
+        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"],
+                                 "request_for_order_progress": [r"(H|h)ow.*my.*order.*look\d*.*(like)?\\?*"],
+                                 "cars_on_sale": [r"[Ss]how.*me.*car.*.*on.*sales*"]}
+
 
 # Function to introduce and welcome our client.
     def hello_customer(self):
@@ -27,8 +29,7 @@ class SupportBot:
 
     def handle_conversation(self, reply):
         while not self.make_exit(reply):
-            #reply = input("How is going?")
-            return self.match_replay(reply)
+            reply = input("How is going?")
 
     def make_exit(self, reply):
         for exit_command in self.exit_commands:
@@ -44,18 +45,21 @@ class SupportBot:
                 match_regex = re.match(regex_pattern, reply)
                 if match_regex and key == "pay_for_service":
                     return self.pay_service()
+                if match_regex and key == "cars_on_sale":
+                    return self.show_cars_on_sale()
 
 #In the correct version the function should put through online payment
     def pay_service(self):
         print("Waiting for save connection...")
-        time.sleep(3)
+        sleep(3)
         print("Waiting for save connection... ")
-        time.sleep(1)
-        print("CONNECTION ERROR\n Try to connect later.\nSorry for trouble.\n")
-        return self.bot_continue()
+        sleep(1)
+        return "CONNECTION ERROR\n Try to connect later.\nSorry for trouble.\n"
+    
+    def show_cars_on_sale(self):
+        
+        parameters = input("")
 
-    def bot_continue(self):
-        return self.handle_conversation(input('How i Can help you?'))
 
 SupportConversatoin = SupportBot()
 

@@ -8,18 +8,26 @@ import time
 
 class SupportBot:
 
+    """exit_commands - tuple of words used to end conversation with bot"""
     exit_commands = ("exit", "leave", "quit", "goodbye", "bye")
 
     def __init__(self):
-        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"]}
+        """matching_phrases - used to recognize what the user wants"""
+        self.matching_phrases = {"pay_for_service": [r"i*.*want.*pay.*for.*service.*", r"pay.*for.*service"],
+                                 "cars_on_sale": [r"[Ss]how.*me.*car.*.*on.*sales*"]}
 
 # Function to introduce and welcome our client.
     def hello_customer(self):
+        """ Function used to welcome the user and start conversation with him"""
+
         name = input("Hello, I'm a customer support of a car dealership.\n"
                      "Our establishment is located on Niepodległości 17 street.\n"
                      "Before I can help you, I need you first and last name.\n")
         help_customer = input(f"Go-ahead {name}, how can I help you with?\n")
-
+        
+        """Conditional statement checking the input for any of exit_commands.
+           If its true then ends program
+           If its not contains any of exit_commands then pass input to handle_conversation function."""
         if help_customer in self.exit_commands:
             print(f'Thank you for the conversation.\nHave a nice day {name}')
             return

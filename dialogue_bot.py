@@ -1,5 +1,6 @@
 import re
 import time
+import method_with_check_on_sale
 
 """This is my first little 'project'.
     It is simple dialogue chat bot.
@@ -52,6 +53,8 @@ class SupportBot:
                 match_regex = re.match(regex_pattern, reply)
                 if match_regex and key == "pay_for_service":
                     return self.pay_service()
+                if match_regex and key == "cars_on_sale":
+                    return 
 
 #In the correct version the function should put through online payment
     def pay_service(self):
